@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+	<webforms_index_index>
+		
+		<reference name="root">
+			<action method="setTemplate"><template>page/1column.phtml</template></action>
+		</reference>
+		
+		<reference name="content">
+			<block type="webforms/webforms" name="webforms" template="webforms/default.phtml"/>
+		</reference>
+	
+	</webforms_index_index>
+
+</layout>

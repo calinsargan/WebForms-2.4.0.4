@@ -1,0 +1,55 @@
+<?php
+/**
+ * @author        Vladimir Popov
+ * @copyright    Copyright (c) 2014 Vladimir Popov
+ */
+?>
+
+<?php $_items = $this->getResultsCollection(); ?>
+<div class="webforms-results">
+
+    <?php echo $this->getChildHtml('toolbar'); ?>
+
+    <?php
+    foreach ($_items as $result) {
+        ?>
+        <div class="webforms-results-block">
+            <h2><?php echo $this->formatDate($result->getCreatedTime()) ?></h2>
+            <?php
+            foreach (Mage::registry('fields_to_fieldsets') as $fieldset) {
+                foreach ($fieldset['fields'] as $field) {
+                    $text = trim($result->getData('field_' . $field->getId()));
+                    $filename = $text;
+                    if (strlen($text) > 0 && $field->getResultDisplay() != 'off') {
+                        ?>
+                        <div class="webforms-results-row">
+
+                            <?php if (strlen($field->getResultLabel()) > 1 && $field->getResultDisplay() != 'value') { ?>
+                                <div class="webforms-results-label"><?php echo $field->getResultLabel() ?></div>
+                            <?php } ?>
+
+                            <?php switch ($field->getType()) {
+                                // text
+                                default:
+                                    ?>
+                                        <div class="webforms-results-text">
+                                            <?php echo nl2br($text) ?>
+                                        </div>
+                                    <?php break;
+                            } ?>
+
+                        </div>
+                    <?php
+                    } // if text
+                } // foreach fields
+            } // foreach fields_to_fieldsets
+            ?>
+        </div>
+    <?php
+    } // foreach results
+    ?>
+
+
+    <?php echo $this->getChildHtml('toolbar'); ?>
+
+</div>

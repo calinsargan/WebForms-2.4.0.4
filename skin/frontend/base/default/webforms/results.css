@@ -1,0 +1,62 @@
+.webforms-results-block{
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px dotted #cccccc;
+	float:left;
+	width:100%;
+	clear:both;
+}
+.webforms-results-row{
+	margin-bottom:5px;
+	width:100%;
+	clear:both;
+	float:left;
+}
+.webforms-results-label{
+	font-weight: bold;
+	display:inline;
+	float:left;
+}
+.webforms-results-text{
+	font-style: italic;
+	display: inline;
+	float: left;
+}
+
+/* Star rating */
+
+.stars {
+	padding:0 5px;
+	width:80px;
+	display: inline;
+	float: left;
+}
+
+.stars-bar {
+	list-style:none;
+	margin: 0px;
+	padding:0px !important;
+	height: 16px;
+	position: relative;
+	background: url(results_stars.png) top left repeat-x;		
+}
+
+.stars-bar li{
+	padding:0px;
+	margin:0px;
+	/*\*/
+	float: left;
+	/* */
+}
+
+.stars-bar li.stars-value {
+	background: url(results_stars.png) left bottom;
+	position: absolute;
+	height: 16px;
+	display: block;
+	z-index: 1;
+}
+
+.webforms-rating-summary {
+    margin-bottom:15px;
+}

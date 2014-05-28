@@ -1,0 +1,60 @@
+.webforms-fields-comment{
+	float:left;
+	margin-top:4px; 
+	line-height:1.3em; 
+	color:#666;
+	font-size:.9em;
+	width:100%;
+}
+
+.webforms-fields-hint{
+    font-style: italic;
+    opacity: 0.5;
+}
+
+.group-select li textarea{
+	height:10em;
+}
+
+.highlight .webforms-calendar input, .webforms-calendar input{
+	background-image:url(calendar.gif);
+	background-position: 99% 2px;
+	background-repeat: no-repeat;
+}
+
+.calendar {z-index: 1000;}
+
+ul.webforms-errors-list{
+	margin:5px;
+	padding:5px;
+	list-style-type: disc;
+	list-style-position: inside;
+}
+ul.webforms-errors-list li {
+	margin-bottom:5px;
+}
+p.webforms-error-message {
+	margin: 10px;
+	text-align:center;
+}
+.webforms-uploaded-file{
+	margin-bottom: 5px;
+	padding:5px;
+	border-radius:3px;
+	border:1px solid #ccc;
+	float:left;
+}
+.webforms-uploaded-file-delete{
+	margin:3px 0 0 0;
+	clear:both;
+}
+
+.webforms-uploaded-file-delete-label{
+	margin-left:5px;
+	float:none !important;
+}
+
+.list-select{padding:10px !important;}
+
+.form-list li, li.control {list-style:none}
+

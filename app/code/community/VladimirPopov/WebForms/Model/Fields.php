@@ -27,6 +27,7 @@ class VladimirPopov_WebForms_Model_Fields extends Mage_Core_Model_Abstract
             "select" => Mage::helper('webforms')->__('Select'),
             "select/radio" => Mage::helper('webforms')->__('Select / Radio'),
             "select/checkbox" => Mage::helper('webforms')->__('Select / Checkbox'),
+            "upload" => Mage::helper('webforms')->__('Upload'),
         ));
 
         // add more field types
@@ -288,6 +289,11 @@ class VladimirPopov_WebForms_Model_Fields extends Mage_Core_Model_Abstract
                 $config['field_class'] = $this->getCssClass();
                 $config['field_options'] = $this->getOptionsArray();
                 $config['template'] = 'webforms/fields/select_checkbox.phtml';
+                break;
+            case 'upload':
+                $config['field_class'] = $this->getCssClass();
+                $config['field_options'] = $this->getOptionsArray();
+                $config['template'] = 'webforms/fields/upload.phtml';
                 break;
             default:
                 if ($customer_value) {
